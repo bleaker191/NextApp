@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind icons;
+
+@layer base {
+  :root {
+    --color-primary: hsl(0, 100%, 100%);
+    --color-secondary: hsla(180, 1%, 28%, 0.5);
+    --color-bg-primary: hsl(0, 0%, 100%);
+    --color-bg-secondary: hsl(100, 50%, 70%);
+    --color-text-base: hsl(0,0%,0%);
+    --color-bg-hover: hsl(100, 50%, 50%);
+    --color-border: hsla(180, 1%, 28%, 0.25);
+  }
+
+  /* * {
+    @apply transition-colors duration-500 ease-in-out
+  } */
+}
+
+.theme-light {
+  --color-primary: hsl(0, 100%, 100%);
+  --color-secondary: hsla(180, 1%, 28%, 0.5);
+  --color-bg-primary: hsl(0, 0%, 100%);
+  --color-bg-secondary: hsl(100, 50%, 70%);
+  --color-text-base: hsl(0,0%,0%);
+  --color-bg-hover: hsl(100, 50%, 50%);
+  --color-border: hsla(180, 1%, 28%, 0.25);
+}
+
+.theme-dark {
+  --color-primary: hsl(180, 0%, 20%);
+  --color-secondary: hsla(180, 1%, 28%, 0.5);
+  --color-bg-primary: hsl(180, 0%, 10%);
+  --color-bg-secondary: hsl(100, 50%, 70%);
+  --color-text-base: hsl(0,0%, 100%);
+  --color-bg-hover: hsl(100, 50%, 50%);
+  --color-border: hsla(180, 1%, 28%, 0.25);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: hsl(180, 0%, 20%);
+    --color-secondary: hsla(180, 1%, 28%, 0.5);
+    --color-bg-primary: hsl(180, 0%, 10%);
+    --color-bg-secondary: hsl(100, 50%, 70%);
+    --color-text-base: hsl(0,0%, 100%);
+    --color-bg-hover: hsl(100, 50%, 50%);
+    --color-border: hsla(180, 1%, 28%, 0.25);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
